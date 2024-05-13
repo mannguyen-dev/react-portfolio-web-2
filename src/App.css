@@ -85,6 +85,11 @@ img {
 }
 
 /*============ REUSEABLE CSS ===============*/
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
 .grid {
   display: grid;
   gap: 30px;
@@ -92,6 +97,17 @@ img {
 
 .section {
   padding-block: 70px;
+}
+
+.section__title {
+  font-size: var(--big-font-size);
+  font-weight: var(--weight-800);
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section__title span {
+  color: var(--first-color);
 }
 
 .button {
