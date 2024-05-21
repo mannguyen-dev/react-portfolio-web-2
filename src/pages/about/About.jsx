@@ -1,9 +1,10 @@
 import React from "react";
-import Info from "./Info";
+import Info from "../../components/Info";
 import { FaDownload } from "react-icons/fa";
 import CV from "../../assets/steve-Cv.pdf";
 import Stats from "../../components/Stats";
 import "./about.css";
+import Skills from "../../components/Skills";
 
 const About = () => {
   return (
@@ -32,6 +33,16 @@ const About = () => {
           <div className="stats grid">
             <Stats />
           </div>
+        </div>
+      </section>
+
+      <div className="separator"></div>
+
+      <section className="skills">
+        <h3 className="section__subtitle subtitle__center">My Skills</h3>
+
+        <div className="skills__container grid">
+          <Skills />
         </div>
       </section>
 
