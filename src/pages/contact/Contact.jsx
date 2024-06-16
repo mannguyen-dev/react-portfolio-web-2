@@ -38,16 +38,16 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact__socials">
-              <a href="https://facebook.com" className="contact__social-link">
+              <a href="https://facebook.com/mannguyenjava" className="contact__social-link">
                 <FaFacebookF />
               </a>
-              <a href="https://twitter.com" className="contact__social-link">
+              <a href="https://x.com/mannguyendev" className="contact__social-link">
                 <FaTwitter />
               </a>
-              <a href="https://youtube.com" className="contact__social-link">
+              <a href="https://www.youtube.com/channel/UC0vIJq3WHTvDWbl6r9aIkcw" className="contact__social-link">
                 <FaYoutube />
               </a>
-              <a href="https://dribbble.com" className="contact__social-link">
+              <a href="https://simple-todo-app-5kl0.onrender.com/" className="contact__social-link">
                 <FaDribbble />
               </a>
             </div>
