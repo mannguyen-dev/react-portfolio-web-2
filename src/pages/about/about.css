@@ -168,3 +168,90 @@
   font-size: var(--smaller-font-size);
   line-height: 1.6;
 }
+
+@media screen and (max-width: 1200px) {
+  .stats__title {
+    padding-left: 35px;
+  }
+
+  .stats__title::before {
+    width: 22px;
+  }
+
+  .skills__container {
+    row-gap: 32px;
+  }
+
+  .progress__circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .skills__title {
+    margin-top: 20px;
+  }
+
+  .resume__icon {
+    width: 36px;
+    height: 36px;
+    line-height: 38px;
+  }
+
+  .resume__item {
+    padding-left: 55px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about__container,
+  .resume__container {
+    grid-template-columns: 1fr;
+  }
+
+  .about__container {
+    row-gap: 40px;
+  }
+
+  .subtitle__center {
+    margin-bottom: 45px;
+  }
+
+  .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume__container {
+    row-gap: 45px;
+  }
+
+  .separator {
+    margin: 65px auto 50px;
+  }
+
+  .resume__item:not(:last-child) {
+    margin-bottom: 45px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info__title {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .stats__box {
+    padding: 15px 15px 25px 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

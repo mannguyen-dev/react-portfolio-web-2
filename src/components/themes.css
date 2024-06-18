@@ -83,3 +83,27 @@
   top: 2px;
   right: 15px;
 }
+
+@media screen and (max-width: 576px) {
+  .theme__img {
+    width: 25px;
+  }
+
+  .style__switcher-toggler,
+  .theme__toggler {
+    width: 40px;
+    height: 40px;
+  }
+
+  .style__switcher-toggler {
+    top: 15%;
+  }
+
+  .theme__toggler {
+    bottom: 15%;
+  }
+
+  .style__switcher-close {
+    top: 5%;
+  }
+}
