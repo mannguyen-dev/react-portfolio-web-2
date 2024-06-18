@@ -197,3 +197,15 @@ img {
     max-width: 540px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    max-width: 300px;
+  }
+}

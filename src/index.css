@@ -18,7 +18,7 @@ code {
 
 @media screen and (max-width: 1024px) {
   .section {
-    padding-block: 50px !important;
+    padding-block: 50px;
   }
 
   .section__title {
