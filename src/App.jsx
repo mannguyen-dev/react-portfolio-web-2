@@ -12,6 +12,8 @@ import { useDispatch } from "react-redux";
 import userService from "./services/UserService";
 import { userActions } from "./store/user-slice";
 import Cookies from "universal-cookie";
+import Logout from "./pages/logout/Logout";
+import { Toaster } from "react-hot-toast";
 
 const cookies = new Cookies();
 
@@ -61,7 +63,16 @@ function App() {
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
+        <Route path="logout" element={<Logout />} />
       </Routes>
+      <Toaster
+        position="top right"
+        toastOptions={{
+          style: {
+            fontSize: "1.4rem",
+          },
+        }}
+      ></Toaster>
     </BrowserRouter>
   );
 }
