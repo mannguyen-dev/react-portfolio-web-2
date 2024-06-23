@@ -1,8 +1,9 @@
 import React from "react";
-import Profile from "../../assets/home.jpg";
+import Profile from "../../assets/profile.jpg";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import "./home.css";
+import { homeData } from "../../data";
 
 const Home = () => {
   return (
@@ -12,13 +13,10 @@ const Home = () => {
       <div className="home__content">
         <div className="home__data">
           <h1 className="home__title">
-            <span>I'm Steve Milner.</span> Web Designer
+            <span>I'm {homeData.name}.</span> {homeData.jobTitle}
           </h1>
 
-          <p className="home__description">
-            I'm a Tunisian based web designer & front-end developer focused on crafting clean & user-friendly
-            experiences, I am passionate about building excellent software that impoves the lives of those around me.
-          </p>
+          <p className="home__description">{homeData.jobDescriptionShort}</p>
 
           <Link to="/about" className="button">
             More About Me{" "}
