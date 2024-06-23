@@ -95,6 +95,11 @@
   line-height: 64px;
 }
 
+.disable-btn-send,
+.disable-btn-send span {
+  background-color: var(--text-color);
+}
+
 @media screen and (max-width: 1200px) {
   .form__input-group {
     grid-template-columns: repeat(2, 1fr);
