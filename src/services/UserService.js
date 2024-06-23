@@ -39,6 +39,7 @@ class UserService {
   }
 
   sendContactMail(contactEmail) {
+    console.log(BACKEND_URL);
     return axios.post(`${BACKEND_URL}/send-mail/send-contact-mail`, contactEmail);
   }
 }
