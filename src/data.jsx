@@ -202,7 +202,7 @@ export const resume = [
     category: "education",
     icon: <FaGraduationCap />,
     year: "2013 - 2017",
-    title: "Bachelor Degree <span> University of Padagogy (Chemistry) </span>",
+    title: "Bachelor Degree <span> University of Padagogy </span>",
     desc: "Have acquired foundational knowledge and engaged in research within the field of chemistry, specifically organic chemistry.",
   },
 ];

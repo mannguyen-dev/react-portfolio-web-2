@@ -1,10 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaEnvelopeOpen, FaPhoneSquareAlt, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import "./contact.css";
 import { FaT } from "react-icons/fa6";
+import userService from "../../services/UserService";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const [contactName, setContactName] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactSubject, setContactSubject] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
+  const [disableBtnSend, setDisableBtnSend] = useState(false);
+
+  const onChangeContactNameHandler = (e) => {
+    e.preventDefault();
+    setContactName(e.target.value);
+  };
+
+  const onChangeContactEmailHandler = (e) => {
+    e.preventDefault();
+    setContactEmail(e.target.value);
+  };
+
+  const onChangeContactSubjectHandler = (e) => {
+    e.preventDefault();
+    setContactSubject(e.target.value);
+  };
+
+  const onChangeContactMessageHandler = (e) => {
+    e.preventDefault();
+    setContactMessage(e.target.value);
+  };
+
+  const sendContactEmailHandler = (e) => {
+    e.preventDefault();
+
+    const sendContactEmail = async () => {
+      const contactEmailContent = {
+        email: contactEmail,
+        subject: contactSubject,
+        name: contactName,
+        message: contactMessage,
+        website: "mannguyen.info",
+      };
+
+      try {
+        console.log("Sending email: ", contactName, contactEmail, contactSubject, contactMessage);
+
+        setDisableBtnSend(true);
+        console.log(contactEmailContent);
+        await userService.sendContactMail(contactEmailContent);
+        setDisableBtnSend(false);
+        toast.success("Sent Contact Message!");
+      } catch (err) {
+        toast.error("An error occurred while sending contact message!");
+        console.log(err);
+        setDisableBtnSend(false);
+      }
+    };
+
+    sendContactEmail();
+  };
+
   return (
     <section className="contact section">
       <h2 className="section__title">
@@ -58,24 +116,47 @@ const Contact = () => {
         <div className="contact__form">
           <div className="form__input-group">
             <div className="form__input-div">
-              <input type="text" placeholder="Your Name" className="form__control" />
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="form__control"
+                onChange={onChangeContactNameHandler}
+              />
             </div>
 
             <div className="form__input-div">
-              <input type="email" placeholder="Your Email" className="form__control" />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="form__control"
+                onChange={onChangeContactEmailHandler}
+              />
             </div>
 
             <div className="form__input-div">
-              <input type="text" placeholder="Your Subject" className="form__control" />
+              <input
+                type="text"
+                placeholder="Your Subject"
+                className="form__control"
+                onChange={onChangeContactSubjectHandler}
+              />
             </div>
           </div>
 
           <div className="form__input-div">
-            <textarea className="form__control textarea" placeholder="Your Message"></textarea>
+            <textarea
+              className="form__control textarea"
+              placeholder="Your Message"
+              onChange={onChangeContactMessageHandler}
+            ></textarea>
           </div>
 
-          <button className="button">
-            Send Message
+          <button
+            disabled={disableBtnSend}
+            className={`button ${disableBtnSend ? "disable-btn-send" : ""}`}
+            onClick={sendContactEmailHandler}
+          >
+            {disableBtnSend ? "Sending..." : "Send Message"}
             <span className="button__icon contact__button-icon">
               <FiSend />
             </span>
