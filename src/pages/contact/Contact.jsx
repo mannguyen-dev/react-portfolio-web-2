@@ -1,7 +1,8 @@
 import React from "react";
-import { FaEnvelopeOpen, FaPhoneSquareAlt, FaFacebookF, FaTwitter, FaYoutube, FaDribbble } from "react-icons/fa";
+import { FaEnvelopeOpen, FaPhoneSquareAlt, FaFacebookF, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import "./contact.css";
+import { FaT } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
 
       <div className="contact__container container grid">
         <div className="contact__data">
-          <h3 className="contact__title">Don't be Shy !</h3>
+          <h3 className="contact__title">Don't hesitate!</h3>
 
           <p className="contact__description">
             Feel free to get in touch with me. I am always open to discussing new project, creative ideas or
@@ -25,7 +26,7 @@ const Contact = () => {
 
               <div>
                 <span className="info__title">Mail me</span>
-                <h4 className="info__desc">steve@gmail.com</h4>
+                <h4 className="info__desc">mannguyen.dev@gmail.com</h4>
               </div>
             </div>
 
@@ -41,14 +42,14 @@ const Contact = () => {
               <a href="https://facebook.com/mannguyenjava" className="contact__social-link">
                 <FaFacebookF />
               </a>
-              <a href="https://x.com/mannguyendev" className="contact__social-link">
-                <FaTwitter />
+              <a href="https://github.com/mannguyen-dev" className="contact__social-link">
+                <FaGithub />
               </a>
-              <a href="https://www.youtube.com/channel/UC0vIJq3WHTvDWbl6r9aIkcw" className="contact__social-link">
-                <FaYoutube />
+              <a href="https://www.linkedin.com/in/mannguyen-dev/" className="contact__social-link">
+                <FaLinkedin />
               </a>
               <a href="https://simple-todo-app-5kl0.onrender.com/" className="contact__social-link">
-                <FaDribbble />
+                <FaT />
               </a>
             </div>
           </div>
